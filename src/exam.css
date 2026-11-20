@@ -1,0 +1,97 @@
+.exam-app { min-height: 100vh; background: #0c121c; color: #e7edf8; }
+.exam-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px max(24px, calc((100vw - 1280px) / 2)); border-bottom: 1px solid #253146; background: #111925; }
+.exam-brand { display: flex; align-items: center; gap: 12px; font-size: 21px; }
+.exam-brand > span { display: grid; place-items: center; width: 35px; height: 35px; background: #426fe5; border-radius: 9px; }
+.exam-brand small { font-size: 12px; color: #a8b6cd; font-weight: 400; padding-left: 12px; border-left: 1px solid #3b4860; }
+.exam-main { max-width: 1328px; margin: auto; padding: 30px 24px 70px; }
+.exam-weeks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 34px; }
+.exam-weeks button { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 18px 20px; border: 1px solid #2a3951; border-radius: 10px; background: #141e2e; text-align: left; }
+.exam-weeks button[aria-current] { background: #1d3151; border-color: #7da5f1; }
+.exam-weeks button span { font-size: 10px; letter-spacing: 1.4px; color: #a1b4d6; }
+.exam-weeks button strong { font-size: 16px; font-weight: 600; }
+.exam-heading { margin-bottom: 26px; }
+.exam-heading > span { display: flex; align-items: center; gap: 7px; color: #85a6e0; font-size: 10px; letter-spacing: 1px; }
+.exam-heading h1 { font-size: 30px; letter-spacing: -.6px; margin: 12px 0; }
+.exam-heading p { color: #a8b8d0; font-size: 14px; margin: 0; }
+.exam-tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 6px; margin: 0 0 24px; background: #101a29; border: 1px solid #29374d; border-radius: 10px; }
+.exam-tabs button { padding: 11px 15px; font-size: 13px; border-radius: 6px; color: #aabbd4; }
+.exam-tabs button[aria-selected="true"], .exam-tabs button[aria-pressed="true"], .exam-tabs button.active { background: #2a436b; color: #edf5ff; }
+.exam-panel { background: #131e2d; border: 1px solid #2b3b53; border-radius: 12px; padding: 24px; margin-bottom: 20px; min-width: 0; }
+.exam-panel h2 { font-size: 20px; line-height: 1.4; font-weight: 600; margin: 0 0 18px; }
+.exam-panel h3 { font-size: 15px; margin: 20px 0 12px; }
+.exam-panel p, .exam-feedback, .exam-steps, .exam-panel li { font-size: 13px; line-height: 1.7; }
+.exam-panel p { color: #aebed5; }
+.exam-panel code, .exam-panel pre { overflow-wrap: anywhere; }
+.exam-panel pre { white-space: pre-wrap; margin: 12px 0; padding: 15px; background: #0b1422; border-radius: 7px; color: #c0d7fb; font-size: 13px; line-height: 1.8; }
+.exam-field { display: flex; flex-direction: column; gap: 9px; margin: 14px 0; color: #bbcce7; font-size: 13px; min-width: 0; }
+.exam-field :is(input,textarea,select), .exam-panel > :is(input,textarea,select) { width: 100%; min-width: 0; border: 1px solid #3a506f; border-radius: 7px; background: #0b1524; color: #e2edff; padding: 12px; font-size: 14px; }
+.exam-field textarea { min-height: 146px; resize: vertical; font-family: Consolas, monospace; line-height: 1.7; }
+.exam-field select { cursor: pointer; }
+.exam-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 16px 0; }
+.exam-toolbar .exam-field { flex: 1; }
+.exam-button, .exam-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; border: 1px solid #4e7dd2; border-radius: 7px; padding: 9px 15px; font-size: 13px; font-weight: 500; background: #376ad0; color: #f4f8ff; }
+.exam-secondary { background: #1a2a41; border-color: #3a506e; color: #c3d6f5; }
+.exam-button:hover:not(:disabled) { background: #4d7fe3; }
+.exam-secondary:hover:not(:disabled) { background: #293f5e; }
+.exam-app button:focus-visible, .exam-app :is(input,textarea,select,summary):focus-visible { outline: 2px solid #9abaff; outline-offset: 3px; }
+.exam-app button:disabled { cursor: default; opacity: .4; }
+.exam-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.exam-feedback { margin: 16px 0; background: #1a2c44; border-left: 3px solid #79a7eb; padding: 14px 17px; border-radius: 0 7px 7px 0; color: #c4d8f6; overflow-wrap: anywhere; }
+.exam-feedback.error, .exam-error { color: #ffc3c3; border-color: #ef8c8c; background: #36222d; }
+.exam-table-scroll { overflow: auto; max-height: 600px; border: 1px solid #314560; border-radius: 8px; margin: 16px 0; }
+.exam-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; line-height: 1.7; }
+.exam-table th { background: #1c2c44; color: #c8daf5; position: sticky; top: 0; z-index: 1; font-weight: 600; }
+.exam-table td, .exam-table th { padding: 10px 12px; border-bottom: 1px solid #2c3b51; vertical-align: top; }
+.exam-table td { color: #afc2df; }
+.exam-table tr.active td, .exam-table tr[aria-current] td { background: #2a4264; color: #fff; }
+.exam-table button { color: #a6c6ff; text-align: left; }
+.exam-steps { padding-left: 24px; color: #b1c7e7; }
+.exam-steps > li { margin: 12px 0; padding-left: 5px; }
+.exam-panel details { padding: 14px 0; border-top: 1px solid #2e3f58; }
+.exam-panel summary { cursor: pointer; font-size: 13px; color: #b3c9ec; }
+.exam-context-help { margin: -8px 0 18px; color: #a4b9d8; font-size: 12px; line-height: 1.7; }
+.exam-context-help summary { cursor: pointer; }
+.exam-context-help p { margin: 12px 0; max-width: 850px; }
+.exam-hint { color: #8fa6c8; font-size: 12px; }
+.exam-recursion-list { margin: 0; }
+.exam-recursion-list > div { padding: 14px 0; border-bottom: 1px solid #2d3e56; }
+.exam-recursion-list dt { font-size: 12px; color: #a0b7d8; margin-bottom: 7px; }
+.exam-recursion-list dd { font-size: 14px; margin: 0; color: #e2edfd; }
+.exam-graph { min-width: 0; border: 1px solid #324762; border-radius: 10px; overflow: hidden; background: #0d1624; margin: 18px 0; }
+.exam-graph-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #2a3b54; font-size: 12px; color: #9fb6d7; }
+.exam-graph-toolbar > div, .exam-graph-toolbar label { display: flex; align-items: center; gap: 10px; }
+.exam-graph-toolbar .exam-secondary { padding: 7px; min-height: 34px; }
+.exam-graph-canvas { width: 100%; height: 600px; }
+.exam-graph:fullscreen { display: flex; flex-direction: column; height: 100vh; border-radius: 0; }
+.exam-graph:fullscreen .exam-graph-canvas { flex: 1; height: auto; }
+.exam-record { width: 220px; border: 1.5px solid #6586b4; border-radius: 9px; background: #172840; padding: 12px 0 0; overflow: visible; color: #e9f2ff; }
+.exam-record-root { border-color: #9c94f7; background: #252447; }
+.exam-record-token { border-color: #65b0a4; background: #14332f; }
+.exam-node-role { display: block; font-size: 10px; padding: 0 12px; color: #b3c6e2; }
+.exam-node-label { display: block; font-family: Consolas, monospace; font-size: 17px; padding: 10px 12px 14px; overflow-wrap: anywhere; }
+.exam-attribute { position: relative; padding: 8px 12px; border-top: 1px solid #395574; font-size: 12px; background: #152b44; }
+.exam-attribute.inherited { background: #352744; border-color: #68517f; }
+.exam-attribute.lexical { background: #1b3a37; border-color: #416e65; }
+.exam-attribute.action { background: #3b3423; border-color: #776640; }
+.exam-attribute.active { outline: 2px solid #ffd27d; outline-offset: -2px; }
+.exam-attribute.complete code b { color: #a6efcb; }
+.exam-attribute-kind { display: block; font-size: 9px; color: #b6c7df; margin-bottom: 3px; }
+.exam-attribute code { color: #e4edfa; font-size: 12px; }
+.exam-graph-legend { display: flex; flex-wrap: wrap; gap: 20px; padding: 14px 16px; font-size: 11px; color: #a6bddb; border-top: 1px solid #2a3b54; }
+.exam-graph-legend span:nth-child(2) { color: #cbb0ec; }
+.exam-graph .react-flow__controls-button { background: #21334f; border-color: #3a4f6f; color: white; fill: white; }
+.exam-app [hidden] { display: none !important; }
+@media (max-width: 800px) {
+  .exam-grid { grid-template-columns: minmax(0, 1fr); }
+  .exam-panel { padding: 18px; }
+  .exam-header { padding: 14px 16px; }
+  .exam-main { padding: 22px 16px 50px; }
+  .exam-brand small { display: none; }
+  .exam-heading h1 { font-size: 26px; }
+  .exam-weeks { gap: 8px; margin-bottom: 26px; }
+  .exam-weeks button { padding: 13px 10px; gap: 7px; }
+  .exam-weeks button strong { font-size: 12px; line-height: 1.4; }
+  .exam-weeks button span { font-size: 9px; letter-spacing: .6px; }
+  .exam-tabs button { padding: 9px 10px; font-size: 12px; }
+  .exam-graph-canvas { height: 510px; }
+}

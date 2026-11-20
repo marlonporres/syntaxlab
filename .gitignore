@@ -1,0 +1,16 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+playwright-derivation-results/
+test-results-formal*/
+*.local
+.DS_Store
+.runtime/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.log
+coverage/
+docs/evidence/study-ui-check.json
