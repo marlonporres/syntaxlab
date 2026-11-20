@@ -3,6 +3,7 @@ import type { Page } from "@playwright/test";
 import { EXERCISES, PROGRESS_KEY, TOPICS } from "../src/engine/learning";
 
 async function navigation(page: Page, label: string) {
+  await expect(page.locator(".app-shell .topbar")).toBeVisible();
   const menu = page.getByRole("button", {
     name: "Abrir navegación",
     exact: true,
